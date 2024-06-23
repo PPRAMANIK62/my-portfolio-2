@@ -1,6 +1,12 @@
 "use client";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
 import {
   FaCss3,
@@ -14,6 +20,7 @@ import {
   SiMongodb,
   SiNextdotjs,
   SiPostgresql,
+  SiPrisma,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
@@ -29,12 +36,12 @@ const about = {
       fieldValue: "Purbayan Pramanik",
     },
     {
-      fieldName: "Nationality",
-      fieldValue: "Indian",
-    },
-    {
       fieldName: "Email",
       fieldValue: "purbayanpramanik62@gmail.com",
+    },
+    {
+      fieldName: "Nationality",
+      fieldValue: "Indian",
     },
     {
       fieldName: "Freelance",
@@ -125,7 +132,11 @@ const skills = {
     },
     {
       icon: <FaGithub />,
-      name: "git and github",
+      name: "git",
+    },
+    {
+      icon: <SiPrisma />,
+      name: "prisma",
     },
   ],
 };
@@ -153,7 +164,7 @@ const page = () => {
           </TabsList>
 
           {/* content */}
-          <div className=" min-h-[70vh] w-full">
+          <div className=" min-h-[72vh] w-full">
             {/* experience */}
             <TabsContent value="experience" className=" w-full">
               <div className=" flex flex-col gap-[30px] text-center xl:text-left">
@@ -219,12 +230,61 @@ const page = () => {
 
             {/* skills */}
             <TabsContent value="skills" className=" w-full h-full">
-              skills
+              <div className=" flex flex-col gap-[30px]">
+                <div className=" flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className=" text-4xl font-bold">{skills.title}</h3>
+                  <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {skills.description}
+                  </p>
+                </div>
+
+                <ScrollArea className=" h-[520px]">
+                  <ul className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                    {skills.skillList.map((skill, i) => (
+                      <li key={i}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className=" w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className=" text-6xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+
+                            <TooltipContent>
+                              <p className=" capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
+              </div>
             </TabsContent>
 
-            {/* experience */}
-            <TabsContent value="about" className=" w-full">
-              about
+            {/* about */}
+            <TabsContent
+              value="about"
+              className=" w-full text-center xl:text-left"
+            >
+              <div className=" flex flex-col gap-[30px]">
+                <h3 className=" text-4xl font-bold">{about.title}</h3>
+                <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
+
+                <ul className=" grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, i) => (
+                    <li
+                      key={i}
+                      className=" flex items-center justify-center xl:justify-start gap-4"
+                    >
+                      <span className=" text-white/60">{item.fieldName}</span>
+                      <span className=" text-xl">{item.fieldValue}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
