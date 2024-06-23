@@ -63,7 +63,6 @@ const ContactForm = () => {
             name="firstName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Firstname</FormLabel>
                 <FormControl>
                   <Input
                     {...field}
@@ -82,7 +81,6 @@ const ContactForm = () => {
             name="lastName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Lastname</FormLabel>
                 <FormControl>
                   <Input
                     {...field}
@@ -101,12 +99,11 @@ const ContactForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input
                     {...field}
                     disabled={isPending}
-                    placeholder="name@example.com"
+                    placeholder="Email address"
                     type="email"
                   />
                 </FormControl>
@@ -120,7 +117,6 @@ const ContactForm = () => {
             name="mobileNumber"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Mobile Number</FormLabel>
                 <FormControl>
                   <Input
                     {...field}
@@ -132,32 +128,35 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
-
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Message</FormLabel>
-                <FormControl>
-                  <Textarea
-                    {...field}
-                    disabled={isPending}
-                    placeholder="Type your message here..."
-                    className=" h-[100px]"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
         </div>
+
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Textarea
+                  {...field}
+                  disabled={isPending}
+                  placeholder="Type your message here..."
+                  className=" h-[200px]"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
         {/* <FormError message={error || urlError} />
         <FormSuccess message={success} /> */}
 
         <Button disabled={isPending} type="submit" className=" w-full">
-          {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : "Send Message"}
+          {isPending ? (
+            <Loader2 className="h-4 w-4 animate-spin" />
+          ) : (
+            "Send Message"
+          )}
         </Button>
       </form>
     </Form>
