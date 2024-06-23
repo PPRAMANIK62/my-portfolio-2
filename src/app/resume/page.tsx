@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion } from "framer-motion";
 import {
   FaCss3,
   FaGithub,
@@ -15,8 +16,6 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import { motion } from "framer-motion";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // about data
 const about = {
@@ -64,7 +63,7 @@ const experience = {
 
 // education data
 const education = {
-  icon: "/assets/resume/badge.svg",
+  icon: "/assets/resume/cap.svg",
   title: "Experience",
   description:
     "lorem ipsum dolor sit amet consectetur adipiscing elit. Voluptates quibusdam, sunt explicabo inventore.",
@@ -146,14 +145,34 @@ const page = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="">Experience</TabsTrigger>
-            <TabsTrigger value="">Education</TabsTrigger>
-            <TabsTrigger value="">Skills</TabsTrigger>
-            <TabsTrigger value="">About me</TabsTrigger>
+            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
 
           {/* content */}
-          <div>content</div>
+          <div className=" min-h-[70vh] w-full">
+            {/* experience */}
+            <TabsContent value="experience" className=" w-full">
+              experience
+            </TabsContent>
+
+            {/* experience */}
+            <TabsContent value="education" className=" w-full">
+              education
+            </TabsContent>
+
+            {/* experience */}
+            <TabsContent value="skills" className=" w-full">
+              skills
+            </TabsContent>
+
+            {/* experience */}
+            <TabsContent value="about" className=" w-full">
+              about
+            </TabsContent>
+          </div>
         </Tabs>
       </div>
     </motion.div>
