@@ -164,7 +164,7 @@ const page = () => {
           </TabsList>
 
           {/* content */}
-          <div className=" min-h-[72vh] w-full">
+          <div className=" min-h-[73vh] w-full">
             {/* experience */}
             <TabsContent value="experience" className=" w-full">
               <div className=" flex flex-col gap-[30px] text-center xl:text-left">
