@@ -1,6 +1,5 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 interface SocialsProps {
   containerStyles?: string;
@@ -8,9 +7,18 @@ interface SocialsProps {
 }
 
 const socials = [
-  { icon: <Github />, path: "https://github.com/PPRAMANIK62" },
-  { icon: <Linkedin />, path: "https://www.linkedin.com/in/ppramanik6" },
-  { icon: <Twitter />, path: "" },
+  {
+    icon: <FaGithub className="h-5 w-5" />,
+    path: "https://github.com/PPRAMANIK62",
+  },
+  {
+    icon: <FaLinkedin className="h-5 w-5" />,
+    path: "https://linkedin.com/in/ppramanik6",
+  },
+  {
+    icon: <FaTwitter className="h-5 w-5" />,
+    path: "https://x.com/PPramanik13941",
+  },
 ];
 
 const Socials = ({ containerStyles, iconStyles }: SocialsProps) => {
@@ -18,7 +26,12 @@ const Socials = ({ containerStyles, iconStyles }: SocialsProps) => {
     <div className={containerStyles}>
       {socials.map((item, index) => {
         return (
-          <Link key={index} href={item.path} className={iconStyles}>
+          <Link
+            key={index}
+            href={item.path}
+            className={iconStyles}
+            target="_blank"
+          >
             {item.icon}
           </Link>
         );
