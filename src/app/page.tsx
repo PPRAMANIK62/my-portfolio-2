@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -25,14 +26,13 @@ const page = () => {
             </p>
             {/* btn & socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
+              <Link
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary h-[56px] px-8 text-sm tracking-[2px] uppercase gap-2"
+                href={"https://rxresu.me/ppramanik62/full-stack-developer"}
               >
                 <span>Download CV</span>
                 <Download className="text-xl" />
-              </Button>
+              </Link>
               <div className="mb-8 xl:mb-0">
                 <Socials
                   containerStyles="flex gap-6"
