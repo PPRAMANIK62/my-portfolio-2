@@ -13,7 +13,7 @@ const socials = [
   },
   {
     icon: <FaLinkedin className="h-5 w-5" />,
-    path: "https://linkedin.com/in/ppramanik6",
+    path: "https://linkedin.com/in/purbayan-pramanik-30586124b",
   },
   {
     icon: <FaTwitter className="h-5 w-5" />,
