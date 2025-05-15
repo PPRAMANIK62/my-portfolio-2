@@ -27,7 +27,7 @@ const page = () => {
             {/* btn & socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Link
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary h-[56px] px-8 text-sm tracking-[2px] uppercase gap-2"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary h-[56px] px-8 text-sm tracking-[2px] uppercase gap-2"
                 href={"https://rxresu.me/ppramanik62/full-stack-developer"}
               >
                 <span>Download CV</span>
