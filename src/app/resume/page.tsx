@@ -29,7 +29,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "lorem ipsum dolor sit amet consectetur adipiscing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "I'm a passionate full stack developer with expertise in modern web technologies. I focus on creating scalable, high-performance applications with clean, maintainable code and intuitive user experiences.",
   info: [
     {
       fieldName: "Name",
@@ -59,12 +59,12 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "Experience",
   description:
-    "lorem ipsum dolor sit amet consectetur adipiscing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "My professional journey in software development, where I've worked on various projects and technologies to build robust web applications.",
   items: [
     {
       company: "TechHuts",
       position: "Full Stack Developer",
-      duration: "2024 - Present",
+      duration: "2024 - 2025",
     },
   ],
 };
@@ -72,13 +72,13 @@ const experience = {
 // education data
 const education = {
   icon: "/assets/resume/cap.svg",
-  title: "Experience",
+  title: "Education",
   description:
-    "lorem ipsum dolor sit amet consectetur adipiscing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "My academic background that has provided me with a strong foundation in computer science and software engineering principles.",
   items: [
     {
       institution: "NIT Durgapur",
-      degree: "Bachelor of Technology",
+      degree: "Bachelor of Technology in Computer Science",
       duration: "2022 - Present",
     },
   ],
@@ -86,9 +86,9 @@ const education = {
 
 // skills data
 const skills = {
-  title: "Experience",
+  title: "Skills",
   description:
-    "lorem ipsum dolor sit amet consectetur adipiscing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "The technologies and tools I've mastered throughout my development journey, enabling me to build comprehensive web solutions.",
   skillList: [
     {
       icon: <FaHtml5 />,

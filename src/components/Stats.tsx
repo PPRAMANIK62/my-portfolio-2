@@ -1,19 +1,14 @@
 "use client";
 import { cn } from "@/lib/utils";
-import React from "react";
 import CountUp from "react-countup";
 
 const stats = [
   {
-    num: 10,
+    num: 15,
     text: "Projects completed",
   },
   {
-    num: 8,
-    text: "Technologies completed",
-  },
-  {
-    num: 400,
+    num: 850,
     text: "Github commits",
   },
 ];

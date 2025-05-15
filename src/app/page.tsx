@@ -1,10 +1,7 @@
 import { Download } from "lucide-react";
-import React from "react";
 
 // components
-import { Button } from "@/components/ui/button";
 import Socials from "@/components/Socials";
-import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Link from "next/link";
 
